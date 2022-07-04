@@ -3,16 +3,19 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro x=0, soma=0
+	inteiro vetor[5]
 
-		para (x=1; x <= 500; x++){
-			se((x % 2) != 0){
-				se((x % 3) == 0){
-					soma += x
-				}
-			}
-		}
-					escreva(soma)
+	para(inteiro x = 0; x <5; x++){
+		escreva("escreva 5 numeros: ")
+		leia(vetor[x])
+	}
+
+	para(inteiro x = 0; x <5; x++){
+		escreva("\n numero escritos: ", vetor[x])
+		
+	}
+	
+	
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -20,7 +23,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 37; 
+ * @POSICAO-CURSOR = 223; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

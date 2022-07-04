@@ -20,7 +20,6 @@ cadeia login, senha
 		leia(login)
 		escreva("digite sua senha com letras e numeros: ")
 		leia(senha)
-		limpa()
 		se(login == " " ou login == ""){
 		escreva ("Digite algum login valido(nao pode ficar vazio): ")
 		leia(login)	
@@ -31,7 +30,6 @@ cadeia login, senha
 
 		escreva("campo nao pode ficar vazio e nao tente burlar as regras")
 		}
-		limpa()
 	}
 enquanto(login != "Melissa" ou senha != "1234a")
 escreva("bem vindo ")
@@ -45,7 +43,7 @@ escreva("bem vindo ")
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 389; 
+ * @POSICAO-CURSOR = 666; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
