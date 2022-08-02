@@ -1,5 +1,6 @@
 package com.blogpessoal.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -8,6 +9,7 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties
+@Entity
 @Table(name = "tb_postagens")
 public class Tema {
 
@@ -22,12 +24,12 @@ public class Tema {
 	}
 	
 	@Size(min=3, max=255)
-		private String tema;
-	public String getTema() {
-		return tema;
+		private String titulo;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setTema(String tema) {
-		this.tema = tema;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 }
