@@ -8,11 +8,11 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.org.generation.Farmacia</groupId>
-	<artifactId>Farmacia</artifactId>
+	<groupId>br.org.generation.BlogPessoal</groupId>
+	<artifactId>BlogPessoal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Farmacia</name>
-	<description>Exercicio para criar uma tabela de Farmacia</description>
+	<name>BlogPessoal</name>
+	<description>Projeto Blog Pessoal exercicio</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
