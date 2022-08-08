@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.superior {
+    background-color: #212529;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.introducao, .problematica{
+    flex-direction: column;
+    background-color: rgba(213, 202, 223, 0.452);
+    padding: 10px;
+}
+.fotos {
+    background-color: rgba(0, 0, 0, 0.096);
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0px;
+    padding: 20px 20px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 3px 1px rgb(158, 156, 156);
+}
+.introducao .fotos div, .problematica .fotos div {
+text-align: center;
+width: 558px;
+}
+.video{
+    text-align: center;
+}
+.problematica iframe{
+    margin: 50px 0;
+    border-radius: 6px;
+    width: 70%;   
+}
+.logo {
+    font-size: 32px;
+    line-height: 100px;
+}
+.menu {
+    line-height: 100px;
+}
+.menu a {
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 40px;
+    color: white;
+}
+/* Corpo */
+.container-corpo{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(190, 171, 207);
+    padding-top: 20px;
+}
+.esquerda {
+    margin: 0px 20px 20px;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+.fotos img{
+    border-radius: 6px;
+}
+.fotos p{
+    text-align: left;
+}
+.footer {
+text-align: center;
+    background-color: black;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+}
+footer div{
+width: 100%;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-central{
+    text-align: center;
+    margin-top: 15px;
+}
+.row{
+    flex-direction: row;
+}
+.introducao .fotos .flex, .problematica .fotos .flex {
+    display: flex;
+    width: 100%;
+    font-weight: 600;
+    justify-content: space-evenly;
+}
+
+.problematica .fotos .flex p, .introducao .fotos .flex p {
+    margin: 0px 10px 20px;
+    padding: 0px 10px;
+    border: 2px solid rgb(100, 100, 100);
+    border-radius: 4px;
+    box-shadow: 0px 3px 3px rgb(158, 156, 156);
+}
+.introducao>.fotos> div,.problematica>.fotos>div{
+width: 100%;
+}
+.problematica>.fotos>div>img{
+    width: 90%;
+    margin: 0px auto; 
+}
+.metas{
+    padding: 10px 20px;
+}
