@@ -6,11 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity //Entidade
 @Table(name="tb_postagens") //transformar em tabela
@@ -27,8 +30,11 @@ public class Postagem {
 		private String texto;
 		@UpdateTimestamp
 		private LocalDateTime data;
-		
-		
+		@ManyToOne
+		@JsonIgnoreProperties("postagem")/*many quer dizer muitas postagens para um(oque esta se referindo que é o
+		tema, e criará um tema_id na tabela tb_postagens; e o postagem refere ao private postagem criado em model Tema */
+		private Tema tema;
+				
 		public Long getId() {
 			return id;
 		}	
@@ -52,6 +58,12 @@ public class Postagem {
 		}
 		public void setData(LocalDateTime data) {
 			this.data = data;
+		}
+		public Tema getTema() {
+			return tema;
+		}
+		public void setTema(Tema tema) {
+			this.tema = tema;
 		}
 
 }
