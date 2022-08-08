@@ -22,7 +22,7 @@
     margin: 50px 0px;
     padding: 20px 20px;
     border-radius: 6px;
-    box-shadow: 0px 3px 3px 1px rgb(158, 156, 156);
+    box-shadow: 0px 3px 3px 1px #4ea54e;
 }
 .introducao .fotos div, .problematica .fotos div {
 text-align: center;
@@ -39,6 +39,13 @@ width: 558px;
 .logo {
     font-size: 32px;
     line-height: 100px;
+    background-image: -webkit-linear-gradient(rgb(7, 255, 7) 35%, rgb(255, 255, 255) 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    font-size: 48px;
+    padding-left: 30px;
+   
 }
 .menu {
     line-height: 100px;
@@ -99,9 +106,9 @@ width: 100%;
 .problematica .fotos .flex p, .introducao .fotos .flex p {
     margin: 0px 10px 20px;
     padding: 0px 10px;
-    border: 2px solid rgb(100, 100, 100);
+    border: 2px solid rgb(120, 185, 114);
     border-radius: 4px;
-    box-shadow: 0px 3px 3px rgb(158, 156, 156);
+    box-shadow: 0px 3px 3px #4ea54e;
 }
 .introducao>.fotos> div,.problematica>.fotos>div{
 width: 100%;
@@ -112,4 +119,33 @@ width: 100%;
 }
 .metas{
     padding: 10px 20px;
+}
+h3{
+    color: #11a504;
+}
+nav a:hover{
+    transition: all 0.1s ease-out;
+    color:white;
+    border-bottom: 2px solid rgb(0, 255, 0);
+    font-size: 25px;
+    
+}
+.referencias p{
+    color: darkgreen;
+    
+}
+ul li{
+   margin-left: 16px;
+    padding-left: 10px; 
+
+}
+.citacao{
+    padding: 0px 10px;
+}
+.problematica .fotos:nth-of-type(4){
+    justify-content: flex-start;
+}
+.problematica .fotos:last-of-type a{
+color: #11a504;
+text-decoration: none;
 }
