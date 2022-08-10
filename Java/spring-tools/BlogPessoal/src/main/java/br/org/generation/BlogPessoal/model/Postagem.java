@@ -34,6 +34,9 @@ public class Postagem {
 		@JsonIgnoreProperties("postagem")/*many quer dizer muitas postagens para um(oque esta se referindo que é o
 		tema, e criará um tema_id na tabela tb_postagens; e o postagem refere ao private postagem criado em model Tema */
 		private Tema tema;
+		@ManyToOne
+		@JsonIgnoreProperties("postagem")
+		private Usuario usuario;
 				
 		public Long getId() {
 			return id;
