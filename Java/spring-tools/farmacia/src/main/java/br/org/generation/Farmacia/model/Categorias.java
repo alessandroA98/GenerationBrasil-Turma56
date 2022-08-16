@@ -21,10 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Categorias {
 	
 	
-	@OneToMany(mappedBy= "categorias", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties("categorias")
-	private List<Produtos> produtos;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -46,6 +42,11 @@ public class Categorias {
 	@NotBlank
 	@Size(min=5, max= 500)
 	private String Beleza;
+	
+	@OneToMany(mappedBy= "categorias", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties("categorias")
+	private List<Produtos> produtos;
+	
 	
 	
 	

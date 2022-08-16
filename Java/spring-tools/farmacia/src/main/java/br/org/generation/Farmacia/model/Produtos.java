@@ -33,8 +33,12 @@ public class Produtos {
 	@Size(min=5, max= 100)
 	private String formaDeAdmistracao;
 	@ManyToOne
-	@JsonIgnoreProperties("categorias")
+	@JsonIgnoreProperties("produtos")
 	private Categorias categorias;
+	@ManyToOne
+	@JsonIgnoreProperties("produtos")
+	private Usuario usuario;
+	
 	
 	
 	public Long getId() {

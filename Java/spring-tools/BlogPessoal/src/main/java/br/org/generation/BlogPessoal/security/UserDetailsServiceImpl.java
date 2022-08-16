@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import br.org.generation.BlogPessoal.model.Usuario;
 import br.org.generation.BlogPessoal.repository.UsuarioRepository;
-
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
