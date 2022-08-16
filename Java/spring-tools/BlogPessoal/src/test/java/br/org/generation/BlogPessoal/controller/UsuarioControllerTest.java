@@ -50,11 +50,11 @@ public class UsuarioControllerTest {
 	@DisplayName("cadastrar um usuario")
 	public void deveCriarUmUsuario() {
 		
-		HttpEntity<Usuario> requisicao = new HttpEntity<Usuario>(new Usuario(0l,"paulo antunes", "algo acho q é a foto", "usuario@paulo.com", "123456" ));
+		HttpEntity<Usuario> requisicao = new HttpEntity<Usuario>(new Usuario(0L,
+				"paulo antunes", "algfoto", "usuario@paulo.com", "12345678" ));
 		
 		ResponseEntity<Usuario> resposta = testRestTemplate
-				.exchange("usuario/cadastrar", HttpMethod.POST, requisicao, Usuario.class);
-		
+				.exchange("/usuarios/cadastrar", HttpMethod.POST, requisicao, Usuario.class);
 		
 	assertEquals(HttpStatus.CREATED, resposta.getStatusCode());
 	assertEquals(requisicao.getBody().getNome(), resposta.getBody().getNome());
@@ -85,9 +85,9 @@ public class UsuarioControllerTest {
 	@DisplayName("alterar um usuario")
 	public void deveAtualizarUsuario() {
 		Optional<Usuario> usuarioCreate = usuarioService.cadastrarUsuario(new Usuario(0L,
-				"juliana andrews", "url foto", "juliana@Gmail.com", "123456"));
+				"juliana rews", "url foto", "juliana@Gmail.com", "123456"));
 		Usuario usuarioUpdate = new Usuario(usuarioCreate.get().getId(),
-				"juliana andrews ramos", "url foto atualizada", "juli@gmail.com", "123456");
+				"juliana andramos", "url foto atualizada", "juliasjnsadj@gmail.com", "123456789");
 		HttpEntity<Usuario> requisicao = new HttpEntity<Usuario>(usuarioUpdate);
 		
 		ResponseEntity<Usuario> resposta = testRestTemplate

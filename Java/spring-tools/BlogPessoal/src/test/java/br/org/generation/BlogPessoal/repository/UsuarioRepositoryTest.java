@@ -17,7 +17,6 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import br.org.generation.BlogPessoal.model.Usuario;
 
 
-
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UsuarioRepositoryTest {
@@ -30,10 +29,9 @@ public class UsuarioRepositoryTest {
 		
 		usuarioRepository.deleteAll();
 		
-		usuarioRepository.save(new Usuario(0L, "joao da silva", "foto", "email1@1.com","123456" ));
-		usuarioRepository.save(new Usuario(0L, "joao da silva2", "foto2", "email2@2.com","123456" ));
-		usuarioRepository.save(new Usuario(0L, "joao da silva3", "foto3", "email3@3.com","123456" ));
-		usuarioRepository.save(new Usuario(0L, "joao da silva4", "foto4", "email1@4.com","123456" ));
+		usuarioRepository.save(new Usuario(0L, "joao da silva", "foto", "email1@1.com","12345678" ));
+		usuarioRepository.save(new Usuario(0L, "joao da silva 2", "foto2", "email2@2.com","12345678" ));
+		usuarioRepository.save(new Usuario(0L, "joao da silva 3", "foto3", "email3@3.com","12345678" ));
 	}
 	
 	@Test
@@ -52,8 +50,8 @@ public class UsuarioRepositoryTest {
 		List <Usuario> listaDeUsuarios = usuarioRepository.findAllByNomeContainingIgnoreCase("Silva");
 		assertEquals(3, listaDeUsuarios.size());
 		assertTrue(listaDeUsuarios.get(0).getNome().equals("joao da silva"));
-		assertTrue(listaDeUsuarios.get(1).getNome().equals("joao da silva"));
-		assertTrue(listaDeUsuarios.get(2).getNome().equals("joao da silva"));
+		assertTrue(listaDeUsuarios.get(1).getNome().equals("joao da silva 2"));
+		assertTrue(listaDeUsuarios.get(2).getNome().equals("joao da silva 3"));
 		
 	}
 	
