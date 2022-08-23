@@ -1,0 +1,80 @@
+:root{
+--vinho:#8c000073;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container-contato, .container-inicio{
+    padding-left: 10px;
+}
+.container-contato > nav > a, .container-inicio > nav > a{
+    text-decoration: none;
+    color: black;
+    font-size: 18;
+    font-weight: 600;
+
+}
+.container-contato > nav, .container-inicio > nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 150px ;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    height: 3rem;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+}
+
+/* inicio */
+body{
+    background-image: url(/aula01/img/mapa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container-inicio h1{
+    text-align: center;
+}
+.container-inicio{
+    display: flex;
+    flex-direction: column;
+    background-position: right;
+}
+
+.personagem .descricao{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 70%;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 10px auto;
+    background-image: linear-gradient( to right, rgba(0, 0, 0, 0.863) 30%, rgba(255, 255, 255, 0.726) 100%);
+}
+
+
+.personagem .descricao p {
+max-width: 400px;
+}
+.reverse{
+   flex-direction: row-reverse;
+   color: white;
+   font-weight: 500;
+   font-size: arial;
+   
+}
+
+/*contato*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(61, 60, 60, 0.801);
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
